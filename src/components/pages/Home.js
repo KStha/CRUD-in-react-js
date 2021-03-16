@@ -12,7 +12,7 @@ const Home = () => {
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:5000/users");
     console.log(result);
-    setUser(result.data);
+    setUser(result.data.reverse());
   };
 
   return (
@@ -38,7 +38,7 @@ const Home = () => {
                 <td> {user.email} </td>
                 <td>
                     <Link className="btn btn-primary mr-2" > View </Link>
-                    <Link className="btn btn-outline-primary mr-2"> Edit</Link>
+                    <Link className="btn btn-outline-primary mr-2" to="/users/edit/"> Edit</Link>
                     <Link className="btn btn-danger">Detete </Link>
                 </td>
               </tr>
