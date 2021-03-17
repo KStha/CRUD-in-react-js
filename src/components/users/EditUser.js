@@ -22,7 +22,7 @@ const EditUser = () => {
 
   useEffect(() => {
     loadUser();
-  }, []);                                      
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -31,9 +31,11 @@ const EditUser = () => {
   };
 
   const loadUser = async () => {
-    const result = await axios.get("http://localhost:5000/users/" + id);
+    const result = await axios.get(`http://localhost:5000/users/${id}`);
     setUser(result.data);
+    
   };
+  
 
   return (
     <>
@@ -58,6 +60,7 @@ const EditUser = () => {
                 className='form-control'
                 name='username'
                 value={username}
+                
                 onChange={(e) => onInputChange(e)}
               />
             </div>
