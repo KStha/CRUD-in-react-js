@@ -31,7 +31,7 @@ const EditUser = () => {
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:5000/users/${id}`  );
+    const result = await axios.get(`http://localhost:5000/users/${id}`);
     setUser(result.data);
   };
 
