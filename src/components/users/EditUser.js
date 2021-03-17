@@ -42,7 +42,7 @@ const EditUser = () => {
           <h1> EditUser </h1>
           <form onSubmit={(e) => onSubmit(e)}>
             <div className='mb-3'>
-              <label className='form-label'>Name master</label>
+              <label className='form-label'>Name</label>
               <input
                 type='text'
                 className='form-control'
