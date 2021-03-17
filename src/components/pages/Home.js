@@ -40,7 +40,7 @@ const Home = () => {
                   <Link className='btn btn-primary mr-2'> View </Link>
                   <Link
                     className='btn btn-outline-primary mr-2'
-                    to='/users/edit'
+                    to={`/users/edit/${user.id}`}
                   >
                     Edit
                   </Link>
