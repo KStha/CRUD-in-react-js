@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams }from 'react-router-dom';
 
 const Home = () => {
   const [users, setUser] = useState([]);
@@ -11,9 +11,13 @@ const Home = () => {
 
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:5000/users");
-
+    
     setUser(result.data.reverse());
   };
+ console.log(users)
+
+
+ 
 
   return (
     <div className='container'>
@@ -37,6 +41,7 @@ const Home = () => {
                 <td> {user.username} </td>
                 <td> {user.email} </td>
                 <td>
+<<<<<<< HEAD
                   <Link className='btn btn-primary mr-2'> View </Link>
                   <Link
                     className='btn btn-outline-primary mr-2'
@@ -45,6 +50,11 @@ const Home = () => {
                     Edit
                   </Link>
                   <Link className='btn btn-danger'>Detete </Link>
+=======
+                    <Link className="btn btn-primary mr-2" > View </Link>
+                    <Link className="btn btn-outline-primary mr-2" to={`/users/edit/${user.id}`}> Edit</Link>
+                    <Link className="btn btn-danger">Detete </Link>
+>>>>>>> master
                 </td>
               </tr>
             ))}
