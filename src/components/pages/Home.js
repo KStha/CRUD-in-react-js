@@ -42,7 +42,6 @@ const Home = () => {
                     className='btn btn-outline-primary mr-2'
                     to='/users/edit'
                   >
-                    {" "}
                     Edit
                   </Link>
                   <Link className='btn btn-danger'>Detete </Link>
