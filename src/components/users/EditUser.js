@@ -22,11 +22,11 @@ const EditUser = () => {
 
   useEffect(() => {
     loadUser();
-  }, []);                                      
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/users", user); 
+    await axios.put(`http://localhost:5000/users/${id}`, user);
     history.push("/");
   };
 
@@ -96,8 +96,8 @@ const EditUser = () => {
             </div>
 
             <div className='mb-3 form-check'></div>
-            <button type='submit' className='btn btn-primary'>
-              Submit
+            <button type='submit' className='btn btn-warning'>
+              Update
             </button>
           </form>
         </div>

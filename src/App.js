@@ -8,6 +8,7 @@ import Navbar from "./components/layout/Navbar";
 import AddUsers from "../src/components/users/AddUser";
 import { BrowserRouter as Router, Route, Switch,} from "react-router-dom";
 import EditUser from "./components/users/EditUser";
+import User from "./components/users/User";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/Contact' component={Contact} />
           <Route exact path="/users/add" component={AddUsers}/>
           <Route exact path='/users/edit/:id' component={EditUser} />
+          <Route exact path="/users/:id" component={User}/>
         </Switch>
       </Router>
     </div>
